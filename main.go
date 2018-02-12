@@ -21,7 +21,7 @@ import (
 
 func main() {
 	// configPath := flag.String("c", "", "config file path")
-	configFile := os.Getenv("GOPATH") + "\\src\\github.com\\pilu\\fresh\\runner.conf"
+	configFile := os.Getenv("GOPATH") + "\\src\\github.com\\ilaorou\\fresh\\runner.conf"
 	configPath := flag.String("c", configFile, "config file path")
 	flag.Parse()
 
