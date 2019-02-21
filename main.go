@@ -15,7 +15,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/pilu/fresh/runner"
+	"github.com/ilaorou/fresh/runner"
 	"os"
 )
 
@@ -24,6 +24,7 @@ func main() {
 	configFile := os.Getenv("GOPATH") + "\\src\\github.com\\ilaorou\\fresh\\runner.conf"
 	configPath := flag.String("c", configFile, "config file path")
 	flag.Parse()
+	fmt.Println(configFile)
 
 	if *configPath != "" {
 		if _, err := os.Stat(*configPath); err != nil {
