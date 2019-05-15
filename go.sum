@@ -1,0 +1,14 @@
+github.com/golang/sys v0.0.0-20190514135907-3a4b5fb9f71f h1:mkFtNNs1nF9i977OeCP1hwZuaofn9jCZIYg0DMTg77E=
+github.com/golang/sys v0.0.0-20190514135907-3a4b5fb9f71f/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+github.com/howeyc/fsnotify v0.9.0 h1:0gtV5JmOKH4A8SsFxG2BczSeXWWPvcMT0euZt5gDAxY=
+github.com/howeyc/fsnotify v0.9.0/go.mod h1:41HzSPxBGeFRQKEEwgh49TRw/nKBsYZ2cF1OzPjSJsA=
+github.com/ilaorou/fresh v0.0.0-20190221090147-53d0d5515b8f h1:A+bStYjnpTjXdlHRgZlI7okQp4sxcT5lBrxbSKVhw4I=
+github.com/ilaorou/fresh v0.0.0-20190221090147-53d0d5515b8f/go.mod h1:NpKIM02OspuA1cf0Fymjkm/NOpupGmROCpQe71PdSiA=
+github.com/mattn/go-colorable v0.1.1 h1:G1f5SKeVxmagw/IyvzvtZE4Gybcc4Tr1tf7I8z0XgOg=
+github.com/mattn/go-colorable v0.1.1/go.mod h1:FuOcm+DKB9mbwrcAfNl7/TZVBZ6rcnceauSikq3lYCQ=
+github.com/mattn/go-isatty v0.0.5 h1:tHXDdz1cpzGaovsTB+TVB8q90WEokoVmfMqoVcrLUgw=
+github.com/mattn/go-isatty v0.0.5/go.mod h1:Iq45c/XA43vh69/j3iqttzPXn0bhXyGjM0Hdxcsrc5s=
+github.com/pilu/config v0.0.0-20131214182432-3eb99e6c0b9a h1:Tg4E4cXPZSZyd3H1tJlYo6ZreXV0ZJvE/lorNqyw1AU=
+github.com/pilu/config v0.0.0-20131214182432-3eb99e6c0b9a/go.mod h1:9Or9aIl95Kp43zONcHd5tLZGKXb9iLx0pZjau0uJ5zg=
+github.com/pilu/miniassert v0.0.0-20140522125902-bee63581261a h1:U8Xgy85P2npR1jqpNF4q9rLSt6kzrOrWubkepc3lWbE=
+github.com/pilu/miniassert v0.0.0-20140522125902-bee63581261a/go.mod h1:QKd9TvGj31l6g+MV2PqthhK68d5ZPv/Q2PvtsS0mM3I=
