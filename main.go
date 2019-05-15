@@ -5,11 +5,13 @@ import (
 	"fmt"
 	"github.com/ilaorou/fresh/runner"
 	"os"
+	"path/filepath"
 )
 
 func main() {
 	// configPath := flag.String("c", "", "config file path")
-	configFile := os.Getenv("GOPATH") + "\\fresh.conf"
+	//configFile := os.Getenv("GOPATH") + "\\fresh.conf"
+	configFile := filepath.Join(os.Getenv("GOPATH"), "fresh.conf")
 	configPath := flag.String("c", configFile, "config file path")
 	flag.Parse()
 	fmt.Println(configFile)
