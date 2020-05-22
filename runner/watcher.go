@@ -28,7 +28,7 @@ func watchFolder(path string) {
 		}
 	}()
 
-	watcherLog("Watching %s", path)
+	//watcherLog("Watching %s", path)
 	err = watcher.Watch(path)
 
 	if err != nil {

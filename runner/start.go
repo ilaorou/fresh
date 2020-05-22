@@ -40,12 +40,11 @@ func start() {
 			loopIndex++
 			mainLog("Waiting (loop %d)...", loopIndex)
 			eventName := <-startChannel
-
-			mainLog("receiving first event %s", eventName)
+			//mainLog("receiving first event %s", eventName)
 			mainLog("sleeping for %d milliseconds", buildDelay)
 			time.Sleep(buildDelay * time.Millisecond)
-			mainLog("flushing events")
 
+			//mainLog("flushing events")
 			flushEvents()
 
 			mainLog("Started! (%d Goroutines)", runtime.NumGoroutine())
@@ -112,6 +111,7 @@ func Start() {
 	initLimit()
 	initSettings()
 	initLogFuncs()
+	mainLog(fmt.Sprintf("config file: %s", configPath()))
 	initFolders()
 	setEnvVars()
 	watch()

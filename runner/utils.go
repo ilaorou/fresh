@@ -7,7 +7,7 @@ import (
 )
 
 func initFolders() {
-	runnerLog("InitFolders")
+	//runnerLog("InitFolders")
 	path := tmpPath()
 	_, err := os.Stat(path)
 	if err != nil {
@@ -86,7 +86,11 @@ func createBuildErrorsLog(message string) bool {
 }
 
 func removeBuildErrorsLog() error {
-	err := os.Remove(buildErrorsFilePath())
-
+	_, err := os.Stat(buildErrorsFilePath())
+	if err == nil {
+		err = os.Remove(buildErrorsFilePath())
+	} else {
+		return nil
+	}
 	return err
 }
