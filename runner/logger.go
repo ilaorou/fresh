@@ -18,14 +18,21 @@ func newLogFunc(prefix string) func(string, ...interface{}) {
 		color = fmt.Sprintf("\033[%sm", logColor(prefix))
 		clear = fmt.Sprintf("\033[%sm", colors["reset"])
 	}
-	prefix = fmt.Sprintf("%-11s", prefix)
+	if prefix != "app" {
+		prefix = fmt.Sprintf("%-11s", prefix)
 
-	return func(format string, v ...interface{}) {
-		now := time.Now()
-		timeString := fmt.Sprintf("%d:%d:%02d", now.Hour(), now.Minute(), now.Second())
-		format = fmt.Sprintf("%s%s %s |%s %s", color, timeString, prefix, clear, format)
-		logger.Printf(format, v...)
+		return func(format string, v ...interface{}) {
+			now := time.Now()
+			timeString := fmt.Sprintf("%d:%d:%02d", now.Hour(), now.Minute(), now.Second())
+			format = fmt.Sprintf("%s%s %s |%s %s", color, timeString, prefix, clear, format)
+			logger.Printf(format, v...)
+		}
+	} else {
+		return func(format string, v ...interface{}) {
+			logger.Printf(format, v...)
+		}
 	}
+
 }
 
 func fatal(err error) {
@@ -35,7 +42,9 @@ func fatal(err error) {
 type appLogWriter struct{}
 
 func (a appLogWriter) Write(p []byte) (n int, err error) {
-	appLog(string(p))
+	//appLog(string(p))
+
+	logger.Printf(string(p))
 
 	return len(p), nil
 }
